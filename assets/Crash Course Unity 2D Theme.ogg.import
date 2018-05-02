@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Crash Course Unity 2D Theme.ogg-449605dd6a5c4172398937f56fa1b7ed.oggstr"
+
+[deps]
+
+source_file="res://assets/Crash Course Unity 2D Theme.ogg"
+source_md5="7495c1ccb0134554498fef585a936e26"
+
+dest_files=[ "res://.import/Crash Course Unity 2D Theme.ogg-449605dd6a5c4172398937f56fa1b7ed.oggstr" ]
+dest_md5="aa0b0428812b665f723e33da6b192398"
+
+[params]
+
+loop=true
+loop_offset=0
