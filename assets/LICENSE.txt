@@ -1,0 +1,11 @@
+Original files obtained from:
+http://opengameart.org/content/machu-picchu
+
+level.fbx is a modified version of MPFull.blend from ctdabomb, released under CC-by-sa 3.0
+
+grass.png is from samuncle, released under CC-by-sa 3.0
+
+rock.jpg is from Marianne Gagnon , release under CC-by-sa 3.0
+
+Link to CC-by-sa 3.0 license:
+https://creativecommons.org/licenses/by-sa/3.0/legalcode
