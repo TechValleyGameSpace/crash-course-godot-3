@@ -99,5 +99,6 @@ disabled = false
 [node name="FPS Controller" parent="." index="3" instance=ExtResource( 2 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.60833 )
+new_variable = null
 
 
