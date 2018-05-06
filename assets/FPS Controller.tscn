@@ -29,10 +29,12 @@ axis_lock_angular_z = true
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+gravity = -20.0
 mirrored_vertically = false
 rotate_max_speed = Vector2( 80, 80 )
 vertical_range_degrees = Vector2( -60, 60 )
 rotate_speed = Vector2( 40, 40 )
+jump_velocity = 12.0
 move_speed = Vector2( 10, 12 )
 
 [node name="Camera" type="Camera" parent="." index="0"]
@@ -46,10 +48,10 @@ v_offset = 0.0
 doppler_tracking = 0
 projection = 0
 current = true
-fov = 70.0
+fov = 60.0
 size = 1.0
 near = 0.05
-far = 100.0
+far = 300.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="1"]
