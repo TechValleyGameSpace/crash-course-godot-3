@@ -49,6 +49,7 @@ _sections_unfolded = [ "Shadow" ]
 
 [node name="RigidBody" type="RigidBody" parent="." index="2"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17747, 2.8504, 0.902007 )
 input_ray_pickable = true
 input_capture_on_drag = false
 collision_layer = 1
@@ -100,7 +101,6 @@ disabled = false
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.60833 )
 gravity = -9.81
-jump_velocity = 12.0
 move_speed = Vector2( 10, 10 )
 
 
