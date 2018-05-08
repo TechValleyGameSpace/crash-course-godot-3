@@ -2,15 +2,15 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/level.dae-9a346f2ec3258333150f4e6edcdec149.scn"
+path="res://.import/lowPolyGun.dae-a2ca3533e20ab1ac89f21f0d30672dc4.scn"
 
 [deps]
 
-source_file="res://assets/level.dae"
-source_md5="2f7746041dc014039804bcff2702c2cb"
+source_file="res://assets/lowPolyGun.dae"
+source_md5="67d56e87dd3a07032c5181779f746a9e"
 
-dest_files=[ "res://.import/level.dae-9a346f2ec3258333150f4e6edcdec149.scn" ]
-dest_md5="a65f74039c277f0a91093991c3b2f04e"
+dest_files=[ "res://.import/lowPolyGun.dae-a2ca3533e20ab1ac89f21f0d30672dc4.scn" ]
+dest_md5="b14d6e8a6c555a6a9872d44b5a8f3d92"
 
 [params]
 
