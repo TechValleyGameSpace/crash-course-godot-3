@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/FPS Controller.vs" type="Script" id=1]
+[ext_resource path="res://assets/Gun Controller.vs" type="Script" id=2]
+[ext_resource path="res://assets/lowPolyGun.dae" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=3]
+
+extents = Vector3( 1, 1, 1 )
+
+[sub_resource type="CapsuleShape" id=1]
+
+radius = 0.6
+height = 1.5
+
+[sub_resource type="CapsuleMesh" id=2]
+
+radius = 0.6
+mid_height = 1.8
+radial_segments = 64
+rings = 8
+
+[node name="FPS Controller" type="KinematicBody"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 2
+collision_mask = 1
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = true
+axis_lock_angular_y = false
+axis_lock_angular_z = true
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Transform" ]
+gravity = -40.0
+mirrored_vertically = false
+jump_velocity = 12.0
+rotate_max_speed = Vector2( 80, 80 )
+move_speed = Vector2( 10, 12 )
+vertical_range_degrees = Vector2( -60, 60 )
+rotate_speed = Vector2( 40, 40 )
+
+[node name="Camera" type="Camera" parent="." index="0"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.27341, 0 )
+keep_aspect = 1
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler_tracking = 0
+projection = 0
+current = true
+fov = 60.0
+size = 1.0
+near = 0.05
+far = 300.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="Gun Rigidbody" type="RigidBody" parent="Camera" index="0"]
+
+transform = Transform( -0.00379808, 0.043412, -0.498097, -0.043412, 0.496202, 0.0435779, 0.498097, 0.0435779, -2.23798e-08, 0.8, -0.5, -1.49657 )
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 2
+collision_mask = 1
+mode = 3
+mass = 1.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = true
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = false
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+linear_velocity = Vector3( 0, 0, 0 )
+linear_damp = -1.0
+angular_velocity = Vector3( 0, 0, 0 )
+angular_damp = -1.0
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform" ]
+bullet_file_path = "res://assets/Bullet.tscn"
+
+[node name="Collision Box" type="CollisionShape" parent="Camera/Gun Rigidbody" index="0"]
+
+transform = Transform( 1, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0 )
+shape = SubResource( 3 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Low-Poly Gun" parent="Camera/Gun Rigidbody" index="1" instance=ExtResource( 3 )]
+
+transform = Transform( 1, 2.23517e-08, 8.58471e-10, -7.45058e-09, 1, 1.1106e-08, -1.22156e-09, -4.01792e-09, 1, -2.38419e-07, -2.38419e-07, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Aim Direction" type="Spatial" parent="Camera/Gun Rigidbody" index="2"]
+
+transform = Transform( 2, 0, 1.07159e-09, 0, 2, 7.17282e-09, 3.50852e-10, 6.86532e-09, 2, -2.12768, 0, -1.19209e-07 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.4, 0 )
+shape = SubResource( 1 )
+disabled = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape" index="0"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 2 )
+skeleton = NodePath("..")
+material/0 = null
+
+
