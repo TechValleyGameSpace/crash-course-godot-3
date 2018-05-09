@@ -4,3 +4,5 @@ assets/test/
 assets/grass__texture3_jpg.material
 assets/rock_wall__texture4_jpg.material
 assets/level.dae.import
+assets/level.mtl
+assets/level.obj.import
