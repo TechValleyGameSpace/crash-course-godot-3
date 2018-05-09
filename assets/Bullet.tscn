@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/Bullet Controller.vs" type="Script" id=1]
+[ext_resource path="res://assets/bulletHit.wav" type="AudioStream" id=2]
 
 [sub_resource type="SphereShape" id=1]
 
@@ -21,6 +22,11 @@ size = Vector3( 0.2, 0.2, 0.2 )
 subdivide_width = 0
 subdivide_height = 0
 subdivide_depth = 0
+
+[sub_resource type="AudioStreamRandomPitch" id=5]
+
+audio_stream = ExtResource( 2 )
+random_pitch = 1.1
 
 [node name="Bullet" type="RigidBody" index="0"]
 
@@ -51,8 +57,8 @@ angular_velocity = Vector3( 0, 0, 0 )
 angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Linear", "Transform", "Visibility" ]
-actual_mass = 1.0
 initial_speed = 15.0
+actual_mass = 1.0
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="0"]
 
@@ -61,7 +67,7 @@ shape = SubResource( 1 )
 disabled = false
 _sections_unfolded = [ "Transform" ]
 
-[node name="MeshInstance" type="MeshInstance" parent="." index="1"]
+[node name="Sphere" type="MeshInstance" parent="." index="1"]
 
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 layers = 1
@@ -85,7 +91,7 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
-[node name="MeshInstance2" type="MeshInstance" parent="." index="3"]
+[node name="Triangle" type="MeshInstance" parent="." index="3"]
 
 transform = Transform( -1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 0, 0, -0.24472 )
 layers = 1
@@ -100,6 +106,25 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 3 )
 skeleton = NodePath("..")
 material/0 = null
+
+[node name="Hit Sound" type="AudioStreamPlayer3D" parent="." index="4"]
+
+stream = SubResource( 5 )
+attenuation_model = 0
+unit_db = -5.0
+unit_size = 1.0
+max_db = 3.0
+autoplay = false
+max_distance = 0.0
+out_of_range_mode = 0
+bus = "Master"
+area_mask = 1
+emission_angle_enabled = false
+emission_angle_degrees = 45.0
+emission_angle_filter_attenuation_db = -12.0
+attenuation_filter_cutoff_hz = 5000.0
+attenuation_filter_db = -24.0
+doppler_tracking = 0
 
 [connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
 
