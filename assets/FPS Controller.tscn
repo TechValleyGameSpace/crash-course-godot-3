@@ -26,7 +26,7 @@ rings = 8
 audio_stream = ExtResource( 4 )
 random_pitch = 1.1
 
-[node name="FPS Controller" type="KinematicBody" index="0"]
+[node name="FPS Controller" type="KinematicBody"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
