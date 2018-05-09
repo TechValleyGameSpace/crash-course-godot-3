@@ -1,0 +1,24 @@
+# Blender MTL File: 'test.blend'
+# Material Count: 2
+
+newmtl grass__texture3_jpg
+Ns 94.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.185040 0.640000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd D:\\Program Files\\Autodesk\\FBX\\FBX Converter\\2013.3\\samples\\grass_dark.png
+
+newmtl rock_wall__texture4_jpg
+Ns 94.117647
+Ka 0.000000 0.000000 0.000000
+Kd 0.588480 0.535520 0.569680
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd D:\\Program Files\\Autodesk\\FBX\\FBX Converter\\2013.3\\samples\\HortonRockWall2.jpg
