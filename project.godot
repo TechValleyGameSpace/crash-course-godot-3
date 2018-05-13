@@ -11,7 +11,12 @@ config_version=3
 [application]
 
 config/name="Crash Course Godot 3"
+run/main_scene="res://Main Level.tscn"
 config/icon="res://icon.png"
+
+[gui]
+
+theme/use_hidpi=true
 
 [input]
 
