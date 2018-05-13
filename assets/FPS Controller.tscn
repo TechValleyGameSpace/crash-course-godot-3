@@ -26,7 +26,7 @@ rings = 8
 audio_stream = ExtResource( 4 )
 random_pitch = 1.1
 
-[node name="FPS Controller" type="KinematicBody"]
+[node name="FPS Controller" type="KinematicBody" index="0"]
 
 input_ray_pickable = true
 input_capture_on_drag = false
@@ -41,13 +41,13 @@ axis_lock_angular_z = true
 collision/safe_margin = 0.001
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
-gravity = -40.0
-jump_velocity = 12.0
-rotate_speed = Vector2( 40, 40 )
+gravity = -9.81
 vertical_range_degrees = Vector2( -60, 60 )
-move_speed = Vector2( 10, 12 )
 rotate_max_speed = Vector2( 80, 80 )
 mirrored_vertically = false
+rotate_speed = Vector2( 40, 40 )
+jump_velocity = 12.0
+move_speed = Vector2( 10, 12 )
 
 [node name="Camera" type="Camera" parent="." index="0"]
 
