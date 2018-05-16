@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/level.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://assets/grass.png" type="Texture" id=2]
 [ext_resource path="res://assets/rock.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/FPS Controller.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cube.tscn" type="PackedScene" id=5]
-[ext_resource path="res://PlaySound.vs" type="Script" id=6]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -189,100 +188,16 @@ _sections_unfolded = [ "Light", "Shadow" ]
 
 _sections_unfolded = [ "Angular", "Linear" ]
 
-[node name="StaticBody2" type="RigidBody" parent="." index="3" instance=ExtResource( 5 )]
+[node name="StaticBody2" parent="." index="3" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.464896, -0.31885, -5.89503 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 1
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = false
-contacts_reported = 1
-contact_monitor = true
-sleeping = false
-can_sleep = true
-axis_lock_linear_x = false
-axis_lock_linear_y = false
-axis_lock_linear_z = false
-axis_lock_angular_x = false
-axis_lock_angular_y = false
-axis_lock_angular_z = false
-linear_velocity = Vector3( 0, 0, 0 )
-linear_damp = -1.0
-angular_velocity = Vector3( 0, 0, 0 )
-angular_damp = -1.0
-script = ExtResource( 6 )
 
-[node name="StaticBody3" type="RigidBody" parent="." index="4" instance=ExtResource( 5 )]
+[node name="StaticBody3" parent="." index="4" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91901, -2.87251, -5.58714 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 1
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = false
-contacts_reported = 1
-contact_monitor = true
-sleeping = false
-can_sleep = true
-axis_lock_linear_x = false
-axis_lock_linear_y = false
-axis_lock_linear_z = false
-axis_lock_angular_x = false
-axis_lock_angular_y = false
-axis_lock_angular_z = false
-linear_velocity = Vector3( 0, 0, 0 )
-linear_damp = -1.0
-angular_velocity = Vector3( 0, 0, 0 )
-angular_damp = -1.0
-script = ExtResource( 6 )
 
-[node name="StaticBody4" type="RigidBody" parent="." index="5" instance=ExtResource( 5 )]
+[node name="StaticBody4" parent="." index="5" instance=ExtResource( 5 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30305, 2.20922, -4.61041 )
-input_ray_pickable = true
-input_capture_on_drag = false
-collision_layer = 1
-collision_mask = 1
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = false
-contacts_reported = 1
-contact_monitor = true
-sleeping = false
-can_sleep = true
-axis_lock_linear_x = false
-axis_lock_linear_y = false
-axis_lock_linear_z = false
-axis_lock_angular_x = false
-axis_lock_angular_y = false
-axis_lock_angular_z = false
-linear_velocity = Vector3( 0, 0, 0 )
-linear_damp = -1.0
-angular_velocity = Vector3( 0, 0, 0 )
-angular_damp = -1.0
-script = ExtResource( 6 )
-
-[connection signal="body_entered" from="StaticBody2" to="StaticBody2" method="_on_StaticBody_body_entered"]
-
-[connection signal="body_entered" from="StaticBody3" to="StaticBody3" method="_on_StaticBody_body_entered"]
-
-[connection signal="body_entered" from="StaticBody4" to="StaticBody4" method="_on_StaticBody_body_entered"]
 
 
